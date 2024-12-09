@@ -1,4 +1,4 @@
-<x-app-layout>
+{{-- <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
@@ -14,4 +14,8 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-app-layout> --}}
+<div>
+    <h1>You're logged in!</h1>
+    <a href="{{route('logout')}}">Logout</a>
+</div>
