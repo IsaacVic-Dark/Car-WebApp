@@ -3,7 +3,7 @@
     @include('layouts.partials.header')
     @yield('content')
 
-    @hasSection()
+    @hasSection('footerLinks')
     <footer>
         @section('footerLinks')
             <a href="#">Link 1</a>
