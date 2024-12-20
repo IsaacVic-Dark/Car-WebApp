@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class CarType extends Model
+class CarImage extends Model
 {
+    //
     public $timestamps = "false";
 
-    //
     protected $fillable = [
-        'name'
+        'image_path',
+        'position'
     ] ;
 }
+
