@@ -1,15 +1,15 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\HelloController;
 use App\Http\Controllers\ProfileController;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [HomeController::class,'index'])->name('home');
+
+Route::get('/car/search', [CarController::class,'search'])->name('car.search');
+Route::resource('car', CarController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
