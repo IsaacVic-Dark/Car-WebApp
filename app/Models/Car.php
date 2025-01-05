@@ -2,6 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\City;
+use App\Models\User;
+use App\Models\Maker;
+use App\Models\CarType;
+use App\Models\CarImage;
+use App\Models\FuelType;
+use App\Models\CarFeatures;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -60,8 +67,6 @@ class Car extends Model
     public function images(){
         return $this->hasMany(CarImage::class);
     }
-
-
     public function favouredUsers(){
         return $this->belongsToMany(User::class, 'favourite_cars');
     }

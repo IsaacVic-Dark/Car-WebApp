@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Car;
+use App\Models\City;
 use Illuminate\Database\Eloquent\Model;
 
 class State extends Model

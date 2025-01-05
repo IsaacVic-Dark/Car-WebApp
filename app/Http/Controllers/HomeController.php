@@ -3,15 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\Maker;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    // 
+    //
     public function index(){
 
-        $cars = Car::where('published_at', "!=", null)->get();
-
+        $maker = Maker::factory()->count(10)->create();
+        dd($maker);
         return view("home.index");
     }
 }

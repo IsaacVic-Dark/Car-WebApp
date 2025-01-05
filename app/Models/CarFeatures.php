@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Car;
 use Illuminate\Database\Eloquent\Model;
 
 class CarFeatures extends Model
@@ -10,7 +11,7 @@ class CarFeatures extends Model
     public $timestamps = "false";
 
     protected $primaryKey = 'car_id';
-    
+
     protected $fillable = [
         'car_id',
         	'abs',

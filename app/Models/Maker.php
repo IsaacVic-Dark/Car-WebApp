@@ -2,10 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Car;
+use App\Models\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Maker extends Model
 {
+    use HasFactory;
     //
     public $timestamps = "false";
     protected $fillable = [
@@ -18,5 +21,4 @@ class Maker extends Model
     public function models(){
         return $this->hasMany(Model::class);
     }
-
 }
